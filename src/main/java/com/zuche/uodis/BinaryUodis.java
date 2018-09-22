@@ -20,7 +20,7 @@ import java.util.*;
 import static com.zuche.uodis.base.Protocol.toByteArray;
 
 
-public class BinaryUodis implements UodisCommands {
+public class BinaryUodis extends PoolRedis {
     protected Client client = null;
     protected Transaction transaction = null;
     protected Pipeline pipeline = null;
@@ -1950,6 +1950,11 @@ public class BinaryUodis implements UodisCommands {
     public String unwatch() {
         client.unwatch();
         return client.getStatusCodeReply();
+    }
+
+    @Override
+    public void setUsedTime() {
+        this.lastUsedTime = System.currentTimeMillis();
     }
 
     @Override
