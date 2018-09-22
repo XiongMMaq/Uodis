@@ -3,18 +3,16 @@ package com.zuche.uodis;
 
 import com.zuche.uodis.base.BuilderFactory;
 import com.zuche.uodis.base.Client;
-import com.zuche.uodis.commands.*;
 import com.zuche.uodis.exceptions.UodisDataException;
 import com.zuche.uodis.exceptions.UodisException;
 import com.zuche.uodis.exceptions.InvalidURIException;
 import com.zuche.uodis.params.*;
 import com.zuche.uodis.support.*;
-import com.zuche.uodis.utils.UodisURIHelper;
+import com.zuche.uodis.utils.*;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLParameters;
 import javax.net.ssl.SSLSocketFactory;
-import java.io.Closeable;
 import java.io.Serializable;
 import java.net.URI;
 import java.util.*;
@@ -22,8 +20,7 @@ import java.util.*;
 import static com.zuche.uodis.base.Protocol.toByteArray;
 
 
-public class BinaryUodis implements BasicCommands, BinaryUodisCommands, MultiKeyBinaryCommands,
-        AdvancedBinaryUodisCommands, BinaryScriptingCommands, Closeable {
+public class BinaryUodis implements UodisCommands {
     protected Client client = null;
     protected Transaction transaction = null;
     protected Pipeline pipeline = null;

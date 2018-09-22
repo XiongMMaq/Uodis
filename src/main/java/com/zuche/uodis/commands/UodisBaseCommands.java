@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * Common interface for sharded and non-sharded Uodis
  */
-public interface UodisCommands {
+public interface UodisBaseCommands {
   String set(String key, String value);
 
   String set(String key, String value, SetParams params);

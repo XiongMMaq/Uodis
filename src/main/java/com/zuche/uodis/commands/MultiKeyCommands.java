@@ -121,7 +121,7 @@ public interface MultiKeyCommands {
    * <p>
    * Since this command allows for incremental iteration, returning only a small number of elements per call,
    * it can be used in production without the downside of commands like {@link #keys(String)} or
-   * {@link UodisCommands#smembers(String)} )} that may block the server for a long time (even several seconds)
+   * {@link UodisBaseCommands#smembers(String)} )} that may block the server for a long time (even several seconds)
    * when called against big collections of keys or elements.
    * <p>
    * SCAN basic usage<br>

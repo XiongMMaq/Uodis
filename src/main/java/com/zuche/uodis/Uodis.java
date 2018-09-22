@@ -14,7 +14,7 @@ import java.net.URI;
 import java.util.*;
 import java.util.Map.Entry;
 
-public class Uodis extends BinaryUodis implements UodisCommands, MultiKeyCommands,
+public class Uodis extends BinaryUodis implements UodisBaseCommands, MultiKeyCommands,
         AdvancedUodisCommands, ScriptingCommands, BasicCommands, ClusterCommands, SentinelCommands, ModuleCommands {
 
 //  protected JedisPoolAbstract dataSource = null;
